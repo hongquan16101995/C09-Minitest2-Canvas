@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas {
+            border: 1px solid;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="600"></canvas>
+<img id="image" src="https://static2.yan.vn/YanNews/202005/202005220338210409-bee6f138-0608-4d56-bce3-27148a855654.png"
+     alt="">
+<script>
+    let ctx = document.getElementById("myCanvas").getContext("2d")
+    ctx.beginPath()
+    // ctx.arc(100, 100, 100, 0, Math.PI * 2)
+    // ctx.fillRect(300, 300, 200, 100)
+    let image = document.getElementById("image")
+    ctx.drawImage(image, 300, 0, 200, 200)
+    ctx.stroke()
+    ctx.closePath()
+
+    ctx.clearRect(0, 0, 800, 600)
+
+    // ctx.drawImage(image, 600, 400, 200, 200)
+    function display(x, y) {
+        x = x + 100
+        y = y + 100
+        ctx.drawImage(image, x, y, 200, 200)
+        setTimeout(display, 1000)
+    }
+
+    display(600, 400)
+</script>
+</body>
+</html>

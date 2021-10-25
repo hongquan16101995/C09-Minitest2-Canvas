@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function displayNumberContainInArray(array, number) {
+        let count = 0
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] === number) {
+                count++
+            }
+        }
+        document.write("Số lần xuất hiện của number trong mảng là: " + count)
+    }
+
+    // let arr = [1, 2, 3, 5, 2, 4, 32]
+    // let number = +prompt("Nhập số cần tìm là: ")
+    // displayNumberContainInArray(arr, number)
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function countNumberBetweenOneTo100() {
+        let count = 0
+        let data = "Các số cần hiển thị là: "
+        for (let i = 1; i < 100; i++) {
+            if (i % 3 === 0 || i % 7 === 0) {
+                data += i + "; "
+                count++
+            }
+        }
+        document.write("Số lượng các số chia hết cho 3 hoặc cho 7 là: " + count + "<br>")
+        document.write(data)
+    }
+
+    // countNumberBetweenOneTo100()
+</script>
+</body>
+</html>

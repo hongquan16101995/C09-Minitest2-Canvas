@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function calculatorAge(birthday) {
+        let presentDate = new Date()
+        let presentYear = presentDate.getFullYear()
+        if (birthday > presentYear) {
+            alert("Không hợp lệ!!!")
+        } else {
+            alert("Tuổi của người cần tìm là: " + (presentYear - birthday))
+        }
+    }
+
+    // calculatorAge(1995)
+</script>
+</body>
+</html>
